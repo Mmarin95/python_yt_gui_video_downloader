@@ -13,17 +13,17 @@ def create_widgets():
     link_label.grid(row=1, column=0, pady=10, padx=10)
 
     # creating the url input
-    root.link_text = Entry(root, width=60, textvariable=video_link)
+    link_text = Entry(root, width=60, textvariable=video_link)
     # placing the point
-    root.link_text.grid(row=1, column=1, pady=10, padx=10)
+    link_text.grid(row=1, column=1, pady=10, padx=10)
 
     # create audio/video dropdown
     OPTS = ["Video", "Audio"]
     type_of_download.set(OPTS[0])
-    root.av_dropdown = OptionMenu(root, type_of_download, *OPTS)
-    root.av_dropdown.config(bg="#ffffff")
+    av_dropdown = OptionMenu(root, type_of_download, *OPTS)
+    av_dropdown.config(bg="#ffffff")
     # place audio/video dropdown
-    root.av_dropdown.grid(row=1, column=2, pady=10, padx=10)
+    av_dropdown.grid(row=1, column=2, pady=10, padx=10)
 
     # creating the destination label
     destination_label = Label(root, text='Destination: ', bg="#999999")
@@ -31,9 +31,9 @@ def create_widgets():
     destination_label.grid(row=2, column=0, pady=10, padx=10)
 
     # creating the destination input
-    root.destination_label = Entry(root, width=60, textvariable=download_path)
+    destination_label = Entry(root, width=60, textvariable=download_path)
     # placing the box
-    root.destination_label.grid(row=2, column=1, pady=10, padx=10)
+    destination_label.grid(row=2, column=1, pady=10, padx=10)
 
     # create the browse destination button
     browse_but = Button(root, text="Browse", command=browse_destination, width=10, bg="#ffffff")
