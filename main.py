@@ -84,6 +84,6 @@ video_link = StringVar()
 download_path = StringVar()
 type_of_download = StringVar()
 
-create_widgets()
-
-root.mainloop()
+if __name__ == "__main__":
+    create_widgets()
+    root.mainloop()
